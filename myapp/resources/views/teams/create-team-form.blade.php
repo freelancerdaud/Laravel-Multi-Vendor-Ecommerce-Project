@@ -29,7 +29,7 @@
     </x-slot>
 
     <x-slot name="actions">
-        <x-button>
+        <x-button class="cursor-pointer">
             {{ __('Create') }}
         </x-button>
     </x-slot>

@@ -38,11 +38,11 @@
 
     @if (Gate::check('update', $team))
         <x-slot name="actions">
-            <x-action-message class="me-3" on="saved">
+            <x-action-message class="me-3 cursor-pointer" on="saved">
                 {{ __('Saved.') }}
             </x-action-message>
 
-            <x-button>
+            <x-button class="cursor-pointer">
                 {{ __('Save') }}
             </x-button>
         </x-slot>
