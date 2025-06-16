@@ -51,6 +51,20 @@
                 <x-input-error for="photo" class="mt-2" />
             </div>
         @endif
+        
+        <!-- User ID -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="user_id" value="{{ __('User ID') }}" />
+            <x-input id="user_id" type="text" class="mt-1 block w-full" wire:model="state.id" disabled />
+            <x-input-error for="user_id" class="mt-2" />
+        </div>
+        
+        <!-- Role -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-label for="role" value="{{ __('Role') }}" />
+            <x-input id="role" type="text" class="mt-1 block w-full" wire:model="state.role" required autocomplete="role" />
+            <x-input-error for="role" class="mt-2" />
+        </div>
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
@@ -83,7 +97,7 @@
                 <p class="text-sm mt-2 dark:text-white">
                     {{ __('Your email address is unverified.') }}
 
-                    <button type="button" class="underline cursor-pointer text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" wire:click.prevent="sendEmailVerification">
+                    <button type="button" class="cursor-pointer text-sm text-gray-600 dark:text-red-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" wire:click.prevent="sendEmailVerification">
                         {{ __('Click here to re-send the verification email.') }}
                     </button>
                 </p>

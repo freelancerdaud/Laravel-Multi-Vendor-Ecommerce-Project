@@ -33,7 +33,7 @@
         </x-action-message>
 
         <x-button class="cursor-pointer">
-            {{ __('Save') }}
+            {{ __('Update') }}
         </x-button>
     </x-slot>
 </x-form-section>
