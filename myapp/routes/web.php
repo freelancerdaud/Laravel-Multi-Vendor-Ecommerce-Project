@@ -13,15 +13,15 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
-    })->name('dashboard');
+    })->middleware(['auth', 'verified', 'rolemanager:customer'])->name('dashboard');
 
     Route::get('/admin', function () {
         return view('admin');
-    })->name('admin');
+    })->middleware(['auth', 'verified', 'rolemanager:admin'])->name('admin');
 
     Route::get('/vendor', function () {
         return view('vendor');
-    })->name('vendor');
+    })->middleware(['auth', 'verified', 'rolemanager:vendor'])->name('vendor');
 
 
 });
