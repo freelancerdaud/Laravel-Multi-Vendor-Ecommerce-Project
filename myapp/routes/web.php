@@ -14,4 +14,14 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/admin', function () {
+        return view('admin');
+    })->name('admin');
+
+    Route::get('/vendor', function () {
+        return view('vendor');
+    })->name('vendor');
+
+
 });
